@@ -39,5 +39,28 @@ for (let index = 0; index < pesos.length && index < alturas.length; index++) { /
 
 let imcs = document.querySelectorAll('.info-imc'); // rodando no array de IMCs coletados da tabela e substituindo pelos IMCs amazenados no objeto
 for (let index = 0; index < imcs.length && index < objTabelaPacientes.imcs.length; index++) {
-	imcs[index].innerHTML = objTabelaPacientes.imcs[index];
+	if (objTabelaPacientes.imcs[index] <= 0 || objTabelaPacientes.imcs[index] >= 110) {
+		imcs[index].innerHTML = 'Peso ou altura inválidos!';
+	} else {
+		imcs[index].innerHTML = objTabelaPacientes.imcs[index];
+	}
+}
+
+let classificacao = document.querySelectorAll('.info-classificacao');
+for (let index = 0; index < classificacao.length && index < objTabelaPacientes.imcs.length; index++) {
+	if (objTabelaPacientes.imcs[index] <= 0 || objTabelaPacientes.imcs[index] >= 110) {
+		classificacao[index].innerHTML = 'N/A';
+	} else if (objTabelaPacientes.imcs[index] < 18.5) {
+		classificacao[index].innerHTML = 'Abaixo do peso normal';
+	} else if (objTabelaPacientes.imcs[index] >= 18.5 && objTabelaPacientes.imcs[index] <= 24.9) {
+		classificacao[index].innerHTML = 'Peso normal';
+	} else if (objTabelaPacientes.imcs[index] >= 25 && objTabelaPacientes.imcs[index] <= 29.9) {
+		classificacao[index].innerHTML = 'Excesso de peso';
+	} else if (objTabelaPacientes.imcs[index] >= 30 && objTabelaPacientes.imcs[index] <= 34.9) {
+		classificacao[index].innerHTML = 'Obesidade classe I';
+	} else if (objTabelaPacientes.imcs[index] >= 35 && objTabelaPacientes.imcs[index] <= 39.9) {
+		classificacao[index].innerHTML = 'Obesidade classe II';
+	} else if (objTabelaPacientes.imcs[index] >= 40) {
+		classificacao[index].innerHTML = 'Obesidade classe III';
+	}
 }

@@ -11,4 +11,5 @@ CHECKPOINTS
     4.3) Manipulando a tabela de IMCs, extraindo os dados com o querySelector e adicionando com innerHTML o cálculo do IMC nas células da tabela; ✅
     4.4) Adicionando validação de peso ou altura inválido para o cálculo do IMC (imcs <= 0 || imcs >= 110); ✅
     4.5) Adicionando coluna "Classificação" para inserir a classificação do IMC; ✅
-    
+    4.6) Encapsulamento do código até aqui em funções (calcularImc(), rotularClass()); ✅
+    4.7) Criando função "mudarCor()" para mudar de cor de acordo com o rótulo; ✅

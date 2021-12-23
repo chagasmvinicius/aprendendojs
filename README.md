@@ -12,3 +12,13 @@ CHECKPOINTS
 10) Encapsulamento do código até aqui em funções (calcularImc(), rotularClass()); ✅
 11) Criando função "mudarCor()" para mudar de cor de acordo com o rótulo; ✅
 12) Trocar cor do título adicionando uma class via javascript (.classList.add(classe)) ao invés de usar o (.style); ✅
+13) Adicionando no HMTL a parte do formulário de cadastro de um novo paciente; ✅
+14) Utilizando o .addEventListener(event, function) para criar a ação após o evento do click do mouse no botão "Adicionar" para encaixar uma nova linha da tabela de pacientes; ✅
+15) Utilizar o event.preventDefault() para impedir o comportação padrão do botão "Adicionar"; ✅
+16) Puxando as informações dos inputs do formulário e salvando. Obs.: como é um form, através do querySelector eu posso "caminhar" pelas seções/inputs através da tag "name" da marcação; ✅
+17) Criando novas linhas na tabela de pacientes criando "tr" e "td" para cada paciente e suas infos (document.createElement('td' ou 'tr')); ✅
+18) Colocando os valores dentro das tds com td.textContent = valorDoInput.value; ✅
+19) Criando o vínculo de pai e filhas entre a tr e as tds (novoRegistroTr.appendChild(novoRegistroTd1)). Resumindo: para que eu consiga exibir os dados salvos direto no HTML eu preciso criar todos os elementos e vincular todos entre si. Nesse caso as TDs na TR e a TR no TBODY; ✅
+20) Dividindo as funcionalidades do meu código js em arquivos diferentes. 1) Criação do arquivo "form.js" 2) Inclusão do <script src="./js/form.js"></script> no arquivo "index.html" ✅
+21) Trocando nome do antigo arquivo "principal,js" para "calculo-e-rotulo", <script src="./js/calculo-e-rotulo.js"></script>; ✅
+22) Usando a função calcularImcForm() para calcular o IMC dos novos registros da tabela; ✅

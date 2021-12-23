@@ -1,16 +1,22 @@
-/* [#1] Mudando o texto dentro de um H1 com ID específico  */
+/* Mudando o texto dentro de um H1 com ID específico  */
 var titleH1 = document.querySelector(".titleH1");
-titleH1.textContent = "Vinicius Chagas"; // ou titleH1.innerHTML = "Vinicius Chagas";
-console.log(`Título alterado para ${titleH1.textContent}!`);
+titleH1.textContent = "Calculadora de IMC"; // ou titleH1.innerHTML = "Vinicius Chagas";
+console.log(`${new Date}: O título foi alterado para ${titleH1.textContent}!`);
 titleH1.classList.add('cor-titulo-alterada');
 
-/* [#3] Calculando IMC da tabela puxando os dados com querySelector: */
+/* Calculando IMC da tabela puxando os dados com querySelector: */
 let objTabelaPacientes = {
 	nomes: [],
 	pesos: [],
 	alturas: [],
 	gorduras: [],
 	imcs: []
+}
+
+function calcularImcForm(peso, altura) {
+	let calculo = peso / (altura * altura);
+	objTabelaPacientes.imcs.push(calculo);
+	return calculo.toFixed(2);
 }
 
 function calcularImc() {

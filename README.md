@@ -13,3 +13,4 @@ CHECKPOINTS
     4.5) Adicionando coluna "Classificação" para inserir a classificação do IMC; ✅
     4.6) Encapsulamento do código até aqui em funções (calcularImc(), rotularClass()); ✅
     4.7) Criando função "mudarCor()" para mudar de cor de acordo com o rótulo; ✅
+    4.8) Trocar cor do título adicionando uma class via javascript (.classList.add(classe)) ao invés de usar o (.style); ✅

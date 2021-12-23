@@ -2,6 +2,7 @@
 var titleH1 = document.querySelector(".titleH1");
 titleH1.textContent = "Vinicius Chagas"; // ou titleH1.innerHTML = "Vinicius Chagas";
 console.log(`Título alterado para ${titleH1.textContent}!`);
+titleH1.classList.add('cor-titulo-alterada');
 
 /* [#3] Calculando IMC da tabela puxando os dados com querySelector: */
 let objTabelaPacientes = {
@@ -43,7 +44,7 @@ function calcularImc() {
 	let imcs = document.querySelectorAll('.info-imc'); // rodando no array de IMCs coletados da tabela e substituindo pelos IMCs amazenados no objeto
 	for (let index = 0; index < imcs.length && index < objTabelaPacientes.imcs.length; index++) {
 		if (objTabelaPacientes.imcs[index] <= 0 || objTabelaPacientes.imcs[index] >= 110) {
-			imcs[index].innerHTML = 'Peso ou altura inválidos!';
+			imcs[index].innerHTML = 'Dados inválidos!';
 		} else {
 			imcs[index].innerHTML = objTabelaPacientes.imcs[index];
 		}
@@ -57,6 +58,7 @@ function rotularClass() {
 	for (let index = 0; index < classificacao.length && index < objTabelaPacientes.imcs.length; index++) {
 		if (objTabelaPacientes.imcs[index] <= 0 || objTabelaPacientes.imcs[index] >= 110) {
 			classificacao[index].innerHTML = 'N/A';
+			mudarCor('black', 'white', classificacao[index])
 		} else if (objTabelaPacientes.imcs[index] < 18.5) {
 			classificacao[index].innerHTML = 'Abaixo do peso normal';
 			mudarCor('#FFD700', 'black', classificacao[index]);

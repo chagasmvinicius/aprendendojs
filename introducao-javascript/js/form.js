@@ -6,9 +6,9 @@ btnAdicionar.addEventListener('click', function (event) { //adiconando um listen
     /* Colentando as informações e salvando */
     let dadosForm = document.querySelector('#form-adiciona'); //puxando os dados do id do form para abaixo puxar os valores de cada input
     let nome = dadosForm.nome.value; //acessando os inputs do form pelo "name", isso é possível por ser um form e ser um .querySelector
-    let peso = dadosForm.peso.value;
-    let altura = dadosForm.altura.value;
-    let gordura = dadosForm.gordura.value;
+    let peso = dadosForm.peso.value.replace(',', '.');
+    let altura = dadosForm.altura.value.replace(',', '.');
+    let gordura = dadosForm.gordura.value.replace(',', '.');
 
     /* De fato criando uma tabela linha (tr) e adc informações das colunas (td) */
     let novoRegistroTr = document.createElement('tr'); //criando nova tr

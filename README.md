@@ -23,3 +23,4 @@ CHECKPOINTS
 21) Trocando nome do antigo arquivo "principal,js" para "calculo-e-rotulo", <script src="./js/calculo-e-rotulo.js"></script>; ✅
 22) Usando a função calcularImcForm() para calcular o IMC dos novos registros da tabela; ✅
 23) Limpando os campos do formulário após o salvamento com variavelForm.reset(); ✅
+24) Adicionando .replace(',', '.') para substituir os valores recolhidos nos inputs com ',' por '.' para o cálculo do IMC funcionar independente da maneira que o input for enviado; ✅

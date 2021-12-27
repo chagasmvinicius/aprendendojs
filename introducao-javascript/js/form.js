@@ -46,6 +46,9 @@ btnAdicionar.addEventListener('click', function (event) { //adiconando um listen
     }
     
     rotularClass();
+    
+    /* Limpando os campos após o salvamento */
+    dadosForm.reset();
 
     console.log(`${new Date}: O paciente ${nome} foi adicionado!`);
 });

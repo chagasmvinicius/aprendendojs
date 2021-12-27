@@ -22,3 +22,4 @@ CHECKPOINTS
 20) Dividindo as funcionalidades do meu código js em arquivos diferentes. 1) Criação do arquivo "form.js" 2) Inclusão do <script src="./js/form.js"></script> no arquivo "index.html" ✅
 21) Trocando nome do antigo arquivo "principal,js" para "calculo-e-rotulo", <script src="./js/calculo-e-rotulo.js"></script>; ✅
 22) Usando a função calcularImcForm() para calcular o IMC dos novos registros da tabela; ✅
+23) Limpando os campos do formulário após o salvamento com variavelForm.reset(); ✅

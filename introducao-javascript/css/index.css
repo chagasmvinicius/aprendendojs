@@ -136,3 +136,7 @@ button[disabled=disabled], button:disabled {
 .cor-titulo-alterada {
 	color: yellow;
 }
+
+#mensagem-erro {
+	color: red;
+}

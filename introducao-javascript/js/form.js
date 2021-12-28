@@ -11,12 +11,14 @@ btnAdicionar.addEventListener('click', function (event) { //adiconando um listen
     let gordura = dadosForm.gordura.value.replace(',', '.');
 
     /* Conferir o peso e altura, se estiver errado, mostrar um alert e resetar o formulário */
+    let mensagemErro = document.querySelector('#mensagem-erro');
     if (!validaPeso(peso) || !validaAltura(altura)) {
-        alert(`Dado(s) inválido! Peso: ${peso} ou altura: ${altura}`);
-        console.log(`${new Date}: Dado(s) inválido! Peso: ${peso} ou altura: ${altura}`);
+        mensagemErro.textContent = `Dado(s) inválido(s)! Peso: ${peso} ou altura: ${altura}`;
+        console.log(`${new Date}: Dado(s) inválido(s)! Peso: ${peso} ou altura: ${altura}`);
         dadosForm.reset();
     } else {
         regitrandoNaTabela();
+        mensagemErro.textContent = '';
         console.log(`${new Date}: O paciente ${nome} foi adicionado!`);
     }
 

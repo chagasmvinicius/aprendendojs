@@ -23,24 +23,36 @@ function calcularImc() {
 	/* Buscar as informações dos pacientes na tabela, calcular o IMC e escrever na tabela  */
 
 	let nomes = document.querySelectorAll('.info-nome'); // buscando os nomes na tabela e puxando para o array
-	for (let index = 0; index < nomes.length; index++) {
-		objTabelaPacientes.nomes.push(nomes[index].textContent);
-	}
+	//for (let index = 0; index < nomes.length; index++) {
+	//	objTabelaPacientes.nomes.push(nomes[index].textContent);
+	//}
+	nomes.forEach(function (nome) {
+		objTabelaPacientes.nomes.push(nome.textContent);
+	});
 
 	let pesos = document.querySelectorAll('.info-peso');  // buscando os pesos na tabela e puxando para o array
-	for (let index = 0; index < pesos.length; index++) {
-		objTabelaPacientes.pesos.push(Number(pesos[index].textContent));
-	}
+	//for (let index = 0; index < pesos.length; index++) {
+	//	objTabelaPacientes.pesos.push(Number(pesos[index].textContent));
+	//}
+	pesos.forEach(function (peso) {
+		objTabelaPacientes.pesos.push(Number(peso.textContent));
+	});
 
 	let alturas = document.querySelectorAll('.info-altura'); // buscando as alturas na tabela e puxando para o array
-	for (let index = 0; index < alturas.length; index++) {
-		objTabelaPacientes.alturas.push(Number(alturas[index].textContent));
-	}
+	//for (let index = 0; index < alturas.length; index++) {
+	//	objTabelaPacientes.alturas.push(Number(alturas[index].textContent));
+	//}
+	alturas.forEach(function (altura) {
+		objTabelaPacientes.alturas.push(Number(altura.textContent));
+	});
 
 	let gorduras = document.querySelectorAll('.info-gordura'); // buscando as gorduras na tabela e puxando para o array
-	for (let index = 0; index < gorduras.length; index++) {
-		objTabelaPacientes.gorduras.push(Number(gorduras[index].textContent));
-	}
+	//for (let index = 0; index < gorduras.length; index++) {
+	//	objTabelaPacientes.gorduras.push(Number(gorduras[index].textContent));
+	//}
+	gorduras.forEach(function (gordura) {
+		objTabelaPacientes.gorduras.push(Number(gordura.textContent));
+	});
 
 	for (let index = 0; index < pesos.length && index < alturas.length; index++) { // rodando nos arrays de peso e altura para calcular o IMC
 		let calc = (Number(pesos[index].textContent) / (Number(alturas[index].textContent) * Number(alturas[index].textContent))).toFixed(2)

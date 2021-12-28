@@ -26,3 +26,4 @@ CHECKPOINTS
 24) Adicionando .replace(',', '.') para substituir os valores recolhidos nos inputs com ',' por '.' para o cálculo do IMC funcionar independente da maneira que o input for enviado; ✅
 25) Inclusão da validação de peso e altura no formulário, assim que o input é enviado; ✅
 26) Mudando a mensagem de "Dados inválidos" para um span acima do form; ✅
+27) Alterando alguns "for" por "forEach": vetor.forEach(function(index) { o que fazer com as infos do vetor }); ✅

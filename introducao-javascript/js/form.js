@@ -10,33 +10,51 @@ btnAdicionar.addEventListener('click', function (event) { //adiconando um listen
     let altura = dadosForm.altura.value.replace(',', '.');
     let gordura = dadosForm.gordura.value.replace(',', '.');
 
-    /* De fato criando uma tabela linha (tr) e adc informações das colunas (td) */
-    let novoRegistroTr = document.createElement('tr'); //criando nova tr
-    novoRegistroTr.classList.add('paciente'); //adicionando a classe a nova tr
-    let novoRegistroTdNome = document.createElement('td'); //criando novas tds
-    setarValoresTds(novoRegistroTdNome, nome, 'info-nome');
-    let novoRegistroTdPeso = document.createElement('td');
-    setarValoresTds(novoRegistroTdPeso, peso, 'info-peso');
-    let novoRegistroTdAltura = document.createElement('td');
-    setarValoresTds(novoRegistroTdAltura, altura, 'info-altura');
-    let novoRegistroTdGordura = document.createElement('td');
-    setarValoresTds(novoRegistroTdGordura, gordura, 'info-gordura');
-    let novoRegistroTdImc = document.createElement('td');
-    setarValoresTds(novoRegistroTdImc, calcularImcForm(peso, altura), 'info-imc');
-    let novoRegistroTdClassificacao = document.createElement('td');
-    setarValoresTds(novoRegistroTdClassificacao, 'N/A', 'info-classificacao');
+    /* Conferir o peso e altura, se estiver errado, mostrar um alert e resetar o formulário */
+    if (!validaPeso(peso) || !validaAltura(altura)) {
+        alert(`Dado(s) inválido! Peso: ${peso} ou altura: ${altura}`);
+        console.log(`${new Date}: Dado(s) inválido! Peso: ${peso} ou altura: ${altura}`);
+        dadosForm.reset();
+    } else {
+        regitrandoNaTabela();
+        console.log(`${new Date}: O paciente ${nome} foi adicionado!`);
+    }
 
-    /* Criando o vínculo de pai e filhas entre a tr e as tds */
-    novoRegistroTr.appendChild(novoRegistroTdNome);
-    novoRegistroTr.appendChild(novoRegistroTdPeso);
-    novoRegistroTr.appendChild(novoRegistroTdAltura);
-    novoRegistroTr.appendChild(novoRegistroTdGordura);
-    novoRegistroTr.appendChild(novoRegistroTdImc);
-    novoRegistroTr.appendChild(novoRegistroTdClassificacao);
+    function regitrandoNaTabela() {
 
-    /* Vínculo entre a tr com o tbody para que as informações aparecam na tabela */
-    let tBody = document.querySelector('#tabela-pacientes');
-    tBody.appendChild(novoRegistroTr);
+        /* De fato criando uma tabela linha (tr) e adc informações das colunas (td) */
+        let novoRegistroTr = document.createElement('tr'); //criando nova tr
+        novoRegistroTr.classList.add('paciente'); //adicionando a classe a nova tr
+        let novoRegistroTdNome = document.createElement('td'); //criando novas tds
+        setarValoresTds(novoRegistroTdNome, nome, 'info-nome');
+        let novoRegistroTdPeso = document.createElement('td');
+        setarValoresTds(novoRegistroTdPeso, peso, 'info-peso');
+        let novoRegistroTdAltura = document.createElement('td');
+        setarValoresTds(novoRegistroTdAltura, altura, 'info-altura');
+        let novoRegistroTdGordura = document.createElement('td');
+        setarValoresTds(novoRegistroTdGordura, gordura, 'info-gordura');
+        let novoRegistroTdImc = document.createElement('td');
+        setarValoresTds(novoRegistroTdImc, calcularImcForm(peso, altura), 'info-imc');
+        let novoRegistroTdClassificacao = document.createElement('td');
+        setarValoresTds(novoRegistroTdClassificacao, 'N/A', 'info-classificacao');
+
+        /* Criando o vínculo de pai e filhas entre a tr e as tds */
+        novoRegistroTr.appendChild(novoRegistroTdNome);
+        novoRegistroTr.appendChild(novoRegistroTdPeso);
+        novoRegistroTr.appendChild(novoRegistroTdAltura);
+        novoRegistroTr.appendChild(novoRegistroTdGordura);
+        novoRegistroTr.appendChild(novoRegistroTdImc);
+        novoRegistroTr.appendChild(novoRegistroTdClassificacao);
+
+        /* Vínculo entre a tr com o tbody para que as informações aparecam na tabela */
+        let tBody = document.querySelector('#tabela-pacientes');
+        tBody.appendChild(novoRegistroTr);
+
+        /* Limpando os campos após o salvamento */
+        dadosForm.reset();
+
+        rotularClass();
+    }
 
     /* Resumindo: para que eu consiga exibir os dados salvos direto no HTML eu preciso criar todos os elementos e vincular todos entre si. Nesse caso as TDs na TR e a TR no TBODY */
 
@@ -44,11 +62,20 @@ btnAdicionar.addEventListener('click', function (event) { //adiconando um listen
         td.textContent = tC;
         td.classList.add(classe);
     }
-    
-    rotularClass();
-    
-    /* Limpando os campos após o salvamento */
-    dadosForm.reset();
 
-    console.log(`${new Date}: O paciente ${nome} foi adicionado!`);
+    function validaPeso(peso) {
+        if (peso <= 300 && peso > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function validaAltura(altura) {
+        if (altura <= 3.00 && altura > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 });

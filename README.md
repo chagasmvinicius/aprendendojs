@@ -27,3 +27,4 @@ CHECKPOINTS
 25) Inclusão da validação de peso e altura no formulário, assim que o input é enviado; ✅
 26) Mudando a mensagem de "Dados inválidos" para um span acima do form; ✅
 27) Alterando alguns "for" por "forEach": vetor.forEach(function(index) { o que fazer com as infos do vetor }); ✅
+28) Criação do arquivo remover-paciente.js para a funcionalidade de remoção de pacientes da tabela; ✅

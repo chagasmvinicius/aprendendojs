@@ -29,3 +29,4 @@ CHECKPOINTS
 27) Alterando alguns "for" por "forEach": vetor.forEach(function(index) { o que fazer com as infos do vetor }); ✅
 28) Criação do arquivo remover-paciente.js para a funcionalidade de remoção de pacientes da tabela; ✅
 29) Criando a funcionalidade de remover paciente da tabela com "let exemplo = document.querySelector() / exemplo.addEventListener('click', function(event) { event.target.parentNode.remove() })". Sendo que o event.target "quem" foi clicado e o parentNode é o pai de quem foi clicado; ✅
+30) Adicionando animação no CSS para remoção da linha da tabela e utilizando setTimeout para deixar visível a animação antes de remover a linha; ✅

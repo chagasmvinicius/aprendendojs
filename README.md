@@ -30,3 +30,6 @@ CHECKPOINTS
 28) Criação do arquivo remover-paciente.js para a funcionalidade de remoção de pacientes da tabela; ✅
 29) Criando a funcionalidade de remover paciente da tabela com "let exemplo = document.querySelector() / exemplo.addEventListener('click', function(event) { event.target.parentNode.remove() })". Sendo que o event.target "quem" foi clicado e o parentNode é o pai de quem foi clicado; ✅
 30) Adicionando animação no CSS para remoção da linha da tabela e utilizando setTimeout para deixar visível a animação antes de remover a linha; ✅
+31) Adicionando evento para escutar e recolher o que foi digitado no teclado (evento "input"); ✅
+32) Comparando o que foi digitado no teclado com o array de nomes dos pacientes e sumindo/exibindo com os valores da tabela de acordo com essas validações; ✅
+33) Utilizei "Expressão Regular" (new RegExp()) para tornar a busca dinâmica (contém). Curso de expressões regulares: https://cursos.alura.com.br/course/expressoes-regulares; ✅

@@ -50,6 +50,8 @@
 		<!-- Tabela de Pacientes -->
 		<section class="container">
 			<h2>Meus pacientes</h2>
+			<label for="filtro">Filtro:</label>
+			<input type="text" id="filtrar-tabela" name="filtro" placeholder="Digite o nome de um paciente">
 			<table>
 				<thead>
 					<tr>
@@ -105,6 +107,46 @@
 						<td class="info-imc">0</td>
 						<td class="info-classificacao">N/A</td>
 					</tr>
+					<tr class="paciente">
+						<td class="info-nome">Vinicius</td>
+						<td class="info-peso">78.1</td>
+						<td class="info-altura">1.67</td>
+						<td class="info-gordura">28.9</td>
+						<td class="info-imc">0</td>
+						<td class="info-classificacao">N/A</td>
+					</tr>
+					<tr class="paciente">
+						<td class="info-nome">Karize</td>
+						<td class="info-peso">54</td>
+						<td class="info-altura">1.57</td>
+						<td class="info-gordura">15</td>
+						<td class="info-imc">0</td>
+						<td class="info-classificacao">N/A</td>
+					</tr>
+					<tr class="paciente">
+						<td class="info-nome">Mauro</td>
+						<td class="info-peso">87</td>
+						<td class="info-altura">1.75</td>
+						<td class="info-gordura">39</td>
+						<td class="info-imc">0</td>
+						<td class="info-classificacao">N/A</td>
+					</tr>
+					<tr class="paciente">
+						<td class="info-nome">Tatiane</td>
+						<td class="info-peso">48</td>
+						<td class="info-altura">1.45</td>
+						<td class="info-gordura">16</td>
+						<td class="info-imc">0</td>
+						<td class="info-classificacao">N/A</td>
+					</tr>
+					<tr class="paciente">
+						<td class="info-nome">Claúdio</td>
+						<td class="info-peso">79</td>
+						<td class="info-altura">1.82</td>
+						<td class="info-gordura">9</td>
+						<td class="info-imc">0</td>
+						<td class="info-classificacao">N/A</td>
+					</tr>
 				</tbody>
 			</table>
 		</section>
@@ -113,6 +155,7 @@
 	<script src="./js/calculo-e-rotulo.js"></script>
 	<script src="./js/form.js"></script>
 	<script src="./js/remover-paciente.js"></script>
+	<script src="./js/filtro.js"></script>
 </body>
 
 </html>

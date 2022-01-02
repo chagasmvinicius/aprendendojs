@@ -9,7 +9,7 @@
 
 3) Aulas sobre HTTP/HTTPS ✅
 
-📍 JAVASCRIPT: PROGRAMANDO NA LINGUAGEM DA WEB
+📍 JAVASCRIPT: PROGRAMANDO NA LINGUAGEM DA WEB (pasta "introducao-javascript")
 
 4) Introdução javascript (introducao-javascript):
 5) Uitlizando a função do DOM (Document Object Model) "document.querySelector()" para identificar o ID ("# + id", ou para class seria ". + id") do H1 do título do index.html para trocar o conteúdo de texto do título com a função ".textContent = novoConteudoTexto" (.innerHTML). ✅

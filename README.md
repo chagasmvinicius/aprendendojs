@@ -11,7 +11,7 @@
 
 📍 JAVASCRIPT: PROGRAMANDO NA LINGUAGEM DA WEB (pasta "introducao-javascript")
 
-4) Introdução javascript (introducao-javascript):
+4) Introdução javascript (introducao-javascript);
 5) Uitlizando a função do DOM (Document Object Model) "document.querySelector()" para identificar o ID ("# + id", ou para class seria ". + id") do H1 do título do index.html para trocar o conteúdo de texto do título com a função ".textContent = novoConteudoTexto" (.innerHTML). ✅
 6) Extraindo o script de dentro do HTML para um novo arquivo (/js/principal.js). Para que funcione é necessário referenciar (source/src) esse arquivo dentro da tag script, dentro do HTML com a linha de código: <script src="./js/principal.js"></script> ✅
 7) Manipulando a tabela de IMCs, extraindo os dados com o querySelector e adicionando com innerHTML o cálculo do IMC nas células da tabela; ✅
@@ -45,3 +45,7 @@
 35) Refatorando função para registrar novas informações na tabela; ✅
 36) Finalização da funcionalidade de import de pacientes utilizando o AJAX - Método XMLHttpRequest para puxar (GET) dados de uma API externa (sem validação se os dados já foram puxados ou não). Obs.: utilizei o JSON.parse(json) para transformar a reposta JSON da requisição em um objeto javascript para alimentar a tabela; ✅
 37) Colocando validação pelo status code da requisição para alertar o usuário, caso seja diferente de 200, que ocorreu um erro; ✅
+
+📍 JAVASCRIPT: CONHECENDO O BROWSER E PADRÕES DE PROJETO (pasta "javascript-avancado-i-aula1")
+
+38) Subindo os novos desenvolvimentos padrão para o github; ✅  

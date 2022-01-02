@@ -33,3 +33,6 @@ CHECKPOINTS
 31) Adicionando evento para escutar e recolher o que foi digitado no teclado (evento "input"); ✅
 32) Comparando o que foi digitado no teclado com o array de nomes dos pacientes e sumindo/exibindo com os valores da tabela de acordo com essas validações; ✅
 33) Utilizei "Expressão Regular" (new RegExp()) para tornar a busca dinâmica (contém). Curso de expressões regulares: https://cursos.alura.com.br/course/expressoes-regulares; ✅
+34) Iniciando a criação do botão "Importando pacientes" que fará uma importação de pacientes de um JSON de uma API externa (https://api-pacientes.herokuapp.com/pacientes); ✅
+35) Refatorando função para registrar novas informações na tabela; ✅
+36) Finalização da funcionalidade de import de pacientes utilizando o AJAX - Método XMLHttpRequest para puxar (GET) dados de uma API externa (sem validação se os dados já foram puxados ou não). Obs.: utilizei o JSON.parse(json) para transformar a reposta JSON da requisição em um objeto javascript para alimentar a tabela; ✅

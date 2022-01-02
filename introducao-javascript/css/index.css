@@ -139,6 +139,7 @@ button[disabled=disabled], button:disabled {
 
 #mensagem-erro {
 	color: red;
+	font-weight: bold;
 }
 
 .fadeOut {
@@ -155,5 +156,9 @@ button[disabled=disabled], button:disabled {
 }
 
 .invisivel {
+	display: none;
+}
+
+.mensagem-erro-ajax {
 	display: none;
 }

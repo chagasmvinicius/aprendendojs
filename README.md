@@ -1,8 +1,13 @@
 CHECKPOINTS
 
+* GIT e GITHUB * 
 1) Aulas sobre Git e GitHub ✅
 2) Configuração do Git e GitHub ✅
+
+* HTTP *
 3) Aulas sobre HTTP/HTTPS ✅
+
+* JAVASCRIPT: PROGRAMANDO NA LINGUAGEM DA WEB *
 4) Introdução javascript (introducao-javascript):
 5) Uitlizando a função do DOM (Document Object Model) "document.querySelector()" para identificar o ID ("# + id", ou para class seria ". + id") do H1 do título do index.html para trocar o conteúdo de texto do título com a função ".textContent = novoConteudoTexto" (.innerHTML). ✅
 6) Extraindo o script de dentro do HTML para um novo arquivo (/js/principal.js). Para que funcione é necessário referenciar (source/src) esse arquivo dentro da tag script, dentro do HTML com a linha de código: <script src="./js/principal.js"></script> ✅
@@ -36,3 +41,4 @@ CHECKPOINTS
 34) Iniciando a criação do botão "Importando pacientes" que fará uma importação de pacientes de um JSON de uma API externa (https://api-pacientes.herokuapp.com/pacientes); ✅
 35) Refatorando função para registrar novas informações na tabela; ✅
 36) Finalização da funcionalidade de import de pacientes utilizando o AJAX - Método XMLHttpRequest para puxar (GET) dados de uma API externa (sem validação se os dados já foram puxados ou não). Obs.: utilizei o JSON.parse(json) para transformar a reposta JSON da requisição em um objeto javascript para alimentar a tabela; ✅
+37) Colocando validação pelo status code da requisição para alertar o usuário, caso seja diferente de 200, que ocorreu um erro; ✅

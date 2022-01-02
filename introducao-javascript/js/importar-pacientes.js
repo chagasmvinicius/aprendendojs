@@ -15,13 +15,19 @@ btnImportarPacientes.addEventListener('click', function () {
     xhr = new XMLHttpRequest();
     xhr.open('GET', 'https://api-pacientes.herokuapp.com/pacientes');
     xhr.addEventListener('load', function () {
-        var response = xhr.responseText;
-        var pacientesImportados = JSON.parse(response);
-        pacientesImportados.forEach(function (paciente) {
-            objTabelaPacientes.imcs.push(paciente.imc); //jogando os novos imcs dentro do nosso objeto primátio para que o rotulo da classificação seja feita
-            regitrandoNaTabela(paciente.nome, paciente.peso, paciente.altura, paciente.gordura, paciente.imc);
-        });
-        console.log(`${new Date}: Pacientes importados!`);
+        if (xhr.status == 200) {
+            var response = xhr.responseText;
+            var pacientesImportados = JSON.parse(response);
+            pacientesImportados.forEach(function (paciente) {
+                objTabelaPacientes.imcs.push(paciente.imc); //jogando os novos imcs dentro do nosso objeto primátio para que o rotulo da classificação seja feita
+                regitrandoNaTabela(paciente.nome, paciente.peso, paciente.altura, paciente.gordura, paciente.imc);
+            });
+            console.log(`${new Date}: Pacientes importados!`);
+        } else {
+            console.log(`${new Date}: Erro ${xhr.status} ao tentar estabelecer conexão com a API. Mensagem do erro "${xhr.responseText}".`);
+            var msgErro = document.querySelector('.mensagem-erro-ajax');
+            msgErro.classList.remove('mensagem-erro-ajax');
+        }
     });
     xhr.send();
 });

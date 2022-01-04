@@ -7,17 +7,21 @@
 para que os programadores possam interpretar que essas propriedades são de uma classe e não devem ser acessadas por fora da classe;
 6 - Para que as propriedades da classe possam ser acessadas (e não manipuladas) criamos, por convenção, métodos para retornar os valores das propriedades. 
 Esse métodos são "getters", ou seja, iniciam com "get", ex.: "get valor()", dessa forma, mesmo que o programador tente alterar o valor dessa propriedade, ele não consegue;
+7 - Impedindo as alterações com Object.freeze(this);
+8 - O "Object.freeze(this)" é raso, não deixa imutável também as propriedades internas de cada propriedade do objeto. Para resolver isso, somente
+instanciando um novo objeto para gerar uma cópia da informação original;
 */
 
 class Negociacao {
     constructor(data, quantidade, valor) {
-        this._data = data;
+        this._data = new Date(data.getTime());
         this._quantidade = quantidade;
         this._valor = valor;
+        Object.freeze(this);
     }
     
     get data() {
-        return this._data;
+        return new Date(this._data.getTime());
     }
 
     get quantidade() {

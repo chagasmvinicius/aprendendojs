@@ -58,3 +58,13 @@
 45) Para chamar uma classe criada é necessário utilizar o "new". Ex.: var negociacao = new Negociacao(param1, paramN); ✅
 46) Utilização do "_" a frente das propriedades que não devem ser alteradas ou acionadas diretamente, sem ser pela classe. Essa é uma convenção para que os programadores possam interpretar que essas propriedades são de uma classe e não devem ser acessadas por fora da classe; ✅
 47) ara que as propriedades da classe possam ser acessadas (e não manipuladas) criamos, por convenção, métodos para retornar os valores das propriedades. Esse métodos são "getters", ou seja, iniciam com "get", ex.: "get valor()", dessa forma, mesmo que o programador tente alterar o valor dessa propriedade, ele não consegue; ✅
+48) Impedindo as alterações com Object.freeze(this) dentro do constutor da classe; ✅
+49) Criação da classe NegociacaoController; ✅
+50) Criação do método "adiciona()" que irá executar a negociação a partir do submit do formulário; ✅
+51) Instanciar o arquivo NegociacaoController.js no index.html; ✅
+52) Instanciar a classe NegociacaoController no index.html dentro da tag script: let negociacaoController = new NegociacaoController(); ✅
+53) Linkar o método "adiciona()" na tag form: <form class="form" onsubmit="negociacaoController.adiciona(event)">; ✅
+54) Puxar as informações de cada input e salvar nas variáveis. O código "let $ = document.querySelector.bind(document)" faz com que fique salvo o valor "document.querySelector" dentro da variável e o ".bind(document)" força que o vínculo sempre seja com o escopo de document; ✅
+55) Criar um constructor e lá buscar as informações do input no DOM, dessa forma criamos propriedades na classe e é mais performático; ✅
+56) Adicionar ao método "adiciona(event)" a criação de uma negociação: let negociacao = new Negociacao(this._inputData, this._inputQuantidade, this._inputValor); ✅
+57) A execução da classe dá data inválida, porém temos como consertar convertendo o valor inicial que é uma string em data, assim: let negociacao = new Negociacao(new Date(this._inputData.value.split('-')[0], this._inputData.value.split('-')[1]-1, this._inputData.value.split('-')[2]), this._inputQuantidade.value, this._inputValor.value); ✅   

@@ -68,3 +68,4 @@
 55) Criar um constructor e lá buscar as informações do input no DOM, dessa forma criamos propriedades na classe e é mais performático; ✅
 56) Adicionar ao método "adiciona(event)" a criação de uma negociação: let negociacao = new Negociacao(this._inputData, this._inputQuantidade, this._inputValor); ✅
 57) A execução da classe dá data inválida, porém temos como consertar convertendo o valor inicial que é uma string em data, assim: let negociacao = new Negociacao(new Date(this._inputData.value.split('-')[0], this._inputData.value.split('-')[1]-1, this._inputData.value.split('-')[2]), this._inputQuantidade.value, this._inputValor.value); ✅   
+58) Criar métodos em uma nova classe, DateHelper, para conversão da data para utilização na negociação (DateHelper.js)); ✅

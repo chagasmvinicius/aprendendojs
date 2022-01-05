@@ -11,28 +11,42 @@ para escrever menos;
 8 - Adicionar ao método "adiciona(event)" a criação de uma negociação: let negociacao = new Negociacao(this._inputData, this._inputQuantidade, this._inputValor);   
 9 - A execução da classe dá data inválida, porém temos como consertar convertendo o valor inicial que é uma string em data, assim:
 let negociacao = new Negociacao(new Date(this._inputData.value.split('-')[0], this._inputData.value.split('-')[1]-1, this._inputData.value.split('-')[2]), this._inputQuantidade.value, this._inputValor.value);
+10 - Transformação da classe DateHelper em estática, ou seja, os métodos podem ser chamados diretamente, sem precisar instanciar a classe:
+"DateHelper.textParaData()";
+11 - Criação do método para limpar o formulário (_limpaFormulario()) após a ação da negociação na lista;
+12 - Incluir o ".focus()" no campo data para que, assim que o formulário for resetado, o foco/cursor iniciar no campo data;
 */
 
 class NegociacaoController {
     constructor() {
         let $ = document.querySelector.bind(document);
+        this._formulario = $('.form');
         this._inputData = $('#data');
         this._inputQuantidade = $('#quantidade');
         this._inputValor = $('#valor');
+        this._listaNegociacoes = new ListaNegociacoes;
     }
 
     adiciona(event) {
         event.preventDefault();
 
-        let dateHelper = new DateHelper();
+        this._listaNegociacoes.adiciona(this._criaNegociacao());
 
-        let negociacao = new Negociacao(
-            dateHelper.textoParaData(this._inputData.value),
+        this._limpaFormulario();
+
+        console.log(this._listaNegociacoes.negociacoes);
+    }
+
+    _criaNegociacao() {
+        return new Negociacao(
+            DateHelper.textoParaData(this._inputData.value),
             this._inputQuantidade.value,
             this._inputValor.value
-        );
-        console.log(negociacao);
+        )
+    }
 
-        console.log(dateHelper.dataParaTexto(dateHelper.textoParaData(this._inputData.value), this._inputData.value));
+    _limpaFormulario() {
+        this._formulario.reset();
+        this._inputData.focus();
     }
 }

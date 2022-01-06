@@ -75,3 +75,10 @@
 62) Criação da classe "ListaNegociacoes" dentro de app/models. Essa classe é responsável por criar uma lista com as negociações inputadas e conter os métodos para adicionar novas negociações (push no array) e um get para retornar a lista atualizada; ✅
 63) Criação do método para limpar o formulário (_limpaFormulario()) após a ação da negociação na lista. Usei a função ".reset()"; ✅
 64) Inserir programação defensiva para blindar o método "get negociacoes()" para retornar uma cópia da lista original (return [].concat(this_negociacoes)). Dessa forma, se quiserem, através do console, limpar os dados do array com ".length = 0" ou utilizar diretamente o ".push" para adiconar novas negociações no array, não irá alterar a lista original, pois estamos enviando uma cópia dela nesse método; ✅
+65) Criação da classe "NegociacoesVew"; ✅
+66) Criação do método "template()" que é responsável por armazenar o template string (``) de todo HTML da tabela; ✅
+67) Inclusão do constructor da classe NegociacoesView que irá receber o elemento div com o ID correto para ser a marcação de onde a tabela deve ser inserida. A chamada do elemento foi feita na classe NegociacaoController (this._negociacoesView = new NegociacoesView($('#negociacoesView'))); ✅
+68) Criação do método "update()" que será responsável por introduzir na div (this._elemento) o return do template (tabela); ✅
+69) Evolução do template string para construir a TR e TDs no HTML. Para isso percorremos a lista de negociações (model.negociacoes) com o método ".map".
+A transformação de lista/array para string utilizamos o método ".join('')" que unifica os dados do array com o " " entre eles. Não daria certo utilizar o
+método ".string()" porque esse método por padrão adiciona vírgula entre os elementos do array; ✅

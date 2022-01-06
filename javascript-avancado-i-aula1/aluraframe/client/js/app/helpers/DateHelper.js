@@ -23,6 +23,7 @@ class DateHelper {
     }
 
     static dataParaTexto(data, texto) {
-        return `${texto.split('-')[2]}/${(data.getMonth() + 1)}/${data.getFullYear()}`;
+        //return `${texto.split('-')[2]}/${(data.getMonth() + 1)}/${data.getFullYear()}`;
+        return `${data.getDate()}/${(data.getMonth() + 1)}/${data.getFullYear()}`;
     }
 }

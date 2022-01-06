@@ -15,6 +15,7 @@ let negociacao = new Negociacao(new Date(this._inputData.value.split('-')[0], th
 "DateHelper.textParaData()";
 11 - Criação do método para limpar o formulário (_limpaFormulario()) após a ação da negociação na lista;
 12 - Incluir o ".focus()" no campo data para que, assim que o formulário for resetado, o foco/cursor iniciar no campo data;
+13 - Importação da classe "NegociaçõesView" e utilização da mesma para chamar e exibir a tabela;
 */
 
 class NegociacaoController {
@@ -25,16 +26,20 @@ class NegociacaoController {
         this._inputQuantidade = $('#quantidade');
         this._inputValor = $('#valor');
         this._listaNegociacoes = new ListaNegociacoes;
+        this._negociacoesView = new NegociacoesView($('#negociacoesView'));
+        this._negociacoesView.update(this._listaNegociacoes);
     }
 
     adiciona(event) {
         event.preventDefault();
 
         this._listaNegociacoes.adiciona(this._criaNegociacao());
+        this._negociacoesView.update(this._listaNegociacoes);
 
         this._limpaFormulario();
 
         console.log(this._listaNegociacoes.negociacoes);
+
     }
 
     _criaNegociacao() {

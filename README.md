@@ -85,6 +85,6 @@ método ".string()" porque esse método por padrão adiciona vírgula entre os e
 70) Inclusão no <tfoot></tfoot> de TDs para contabilizar o volume total das negociações. O "colspan=3" significa que a TD precisa ocupar 3 colunas; ✅
 71) Totalizando o volume com forEach na lista de negociacoes.volume + uma função autoexecutável (function() {} ();); ✅
 72) Utilizando o método ".reduce()" na lista de negociações para somar o valor total do volume. Sintaxe do reduce: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce; ✅
-73) riação da classe "MensagemView" que irá conter a construção da marcação no HTML para ser exibida a mensagem, <p></p>, e um método, "update model)", para atualizar/iserir a mensagem no HTML; ✅
+73) riação da classe "MensagemView" que irá conter a construção da marcação no HTML para ser exibida a mensagem e um método, "update model)", para atualizar/iserir a mensagem no HTML; ✅
 74) Criação da classe "Mensagem" que será responsável pelo armanezamento dos textos de todas as mensagens que a aplicação precisar exibir.
 Além disso também criamos métodos para alterar um texto, "set texto()", e outro para puxar a informação de um texto, "get texto()"; ✅

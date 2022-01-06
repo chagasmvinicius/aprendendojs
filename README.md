@@ -82,3 +82,6 @@
 69) Evolução do template string para construir a TR e TDs no HTML. Para isso percorremos a lista de negociações (model.negociacoes) com o método ".map".
 A transformação de lista/array para string utilizamos o método ".join('')" que unifica os dados do array com o " " entre eles. Não daria certo utilizar o
 método ".string()" porque esse método por padrão adiciona vírgula entre os elementos do array; ✅
+70) Inclusão no <tfoot></tfoot> de TDs para contabilizar o volume total das negociações. O "colspan=3" significa que a TD precisa ocupar 3 colunas; ✅
+71) Totalizando o volume com forEach na lista de negociacoes.volume + uma função autoexecutável (function() {} ();); ✅
+72) Utilizando o método ".reduce()" na lista de negociações para somar o valor total do volume. Sintaxe do reduce: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce; ✅

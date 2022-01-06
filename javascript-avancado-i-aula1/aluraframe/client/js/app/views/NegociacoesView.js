@@ -7,6 +7,16 @@ ser inserida. A chamada do elemento foi feita na classe NegociacaoController (th
 5 - Evolução do template string para construir a TR e TDs no HTML. Para isso percorremos a lista de negociações (model.negociacoes) com o método ".map".
 A transformação de lista/array para string utilizamos o método ".join('')" que unifica os dados do array com o " " entre eles. Não daria certo utilizar o
 método ".string()" porque esse método por padrão adiciona vírgula entre os elementos do array;
+6 - Inclusão no <tfoot></tfoot> de TDs para contabilizar o volume total das negociações. O "colspan=3" significa que a TD precisa ocupar 3 colunas;
+7 - Totalizando o volume com forEach na lista de negociacoes.volume + uma função autoexecutável (function() {} ();):
+function () {
+                let total = 0;
+                model.negociacoes.forEach(function (n) {
+                    total += n.volume;
+                })
+                return total;
+            })()
+8 - Utilizando o método ".reduce()" na lista de negociações para somar o valor total do volume. Sintaxe do reduce: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce; 
 */
 
 class NegociacoesView {
@@ -27,19 +37,27 @@ class NegociacoesView {
             </thead>
             
             <tbody>
-                ${model.negociacoes.map(function(n) {
+                ${model.negociacoes.map(function (n) {
                     return `
-                    <tr>
-                        <td>${DateHelper.dataParaTexto(n.data)}</td>
-                        <td>${n.quantidade}</td>
-                        <td>${n.valor}</td>
-                        <td>${n.volume}</td>
-                    </tr>
+                        <tr>
+                            <td>${DateHelper.dataParaTexto(n.data)}</td>
+                            <td>${n.quantidade}</td>
+                            <td>${n.valor}</td>
+                            <td>${n.volume}</td>
+                        </tr>
                     `
                 }).join('')}
             </tbody>
             
             <tfoot>
+            <td colspan="3"></td>
+            <td>
+            ${
+                model.negociacoes.reduce(function(acumulador, n) {
+                    return acumulador + n.volume;
+                }, 0.0)
+            }
+            </td>
             </tfoot>
         </table>
         `

@@ -17,14 +17,17 @@ function () {
                 return total;
             })()
 8 - Utilizando o método ".reduce()" na lista de negociações para somar o valor total do volume. Sintaxe do reduce: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce; 
+9 - Importação dos métodos "update()" e do constructor da classe "View" como herança, através a declaração "class NegociacoesView extends View".
+Dessa forma, o construtor utiliza o método "super()" para enviar o parâmetro ao pai e utilizamos os métodos herdados da classe pai "View";
 */
 
-class NegociacoesView {
+class NegociacoesView extends View {
+
     constructor(elemento) {
-        this._elemento = elemento;
+        super(elemento);
     }
 
-    _template(model) {
+    template(model) {
         return `
         <table class="table table-hover table-bordered">
             <thead>
@@ -61,9 +64,5 @@ class NegociacoesView {
             </tfoot>
         </table>
         `
-    }
-
-    update(model) {
-        this._elemento.innerHTML = this._template(model);
     }
 }

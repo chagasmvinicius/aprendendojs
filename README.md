@@ -90,3 +90,8 @@ método ".string()" porque esse método por padrão adiciona vírgula entre os e
 Além disso também criamos métodos para alterar um texto, "set texto()", e outro para puxar a informação de um texto, "get texto()"; ✅
 75) Criação da classe pai "View" para acumular os métodos comuns dentre as outras viewers para que possamos herdá-los em cada uma e utilizar esses métodos em cada uma, sem a necessidade de repetir código. Basta declarar nas classes filhas, que essas são extensões dessa classe pai (extends). Além disso, em caso de métodos que possuem parâmetros, devemos em cada classe filha utilizar o método "super(parâmetro)" dentro do construtor para que o parâmetro em questão seja enviado à classe pai. Obs.: ao chamar o arquivo "View.js" no HTML é necessário chamá-lo antes dos arquivos das classes filhas, pois esse arquivo precisa ser carregado antes pelo HTML; ✅
 76) Importação dos métodos "update()" e do constructor da classe "View" como herança, através a declaração "class NegociacoesView extends View". Dessa forma, o construtor utiliza o método "super()" para enviar o parâmetro ao pai e utilizamos os métodos herdados da classe pai "View"; ✅
+
+📍 JAVASCRIPT PARA BACKEND (pasta "fundamentos-javascript")
+Obs.: acabei iniciando esse curso após ter feito os dois anteriores voltados para web. Por conta disso, acabei só salvando aqui alguns exercícios-chave para aprimorar o meu conhecimento.
+
+77) Iniciando exercícios práticos de arrays utilizando forEach; ✅

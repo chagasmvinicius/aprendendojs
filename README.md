@@ -95,3 +95,4 @@ Além disso também criamos métodos para alterar um texto, "set texto()", e out
 Obs.: acabei iniciando esse curso após ter feito os dois anteriores voltados para web. Por conta disso, acabei só salvando aqui alguns exercícios-chave para aprimorar o meu conhecimento.
 
 77) Iniciando exercícios práticos de arrays utilizando forEach; ✅
+78) Exercícios e testes utilizando alguns dos principais métodos de um Array (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array). Está tudo detalhado no arquivo "array.js"; ✅

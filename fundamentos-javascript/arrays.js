@@ -137,3 +137,21 @@ const familia2D = [familia, idades];
 for (let i = 0; i < familia2D[0].length && i < familia2D[1].length; i++) {
     console.log(`NOME: ${familia2D[0][i]} | IDADE: ${familia2D[1][i]} \n`);
 }
+
+/* Filtrando alunos reprovados */
+
+const alunos = ['Vinicius', 'Karize', 'Sergio', 'Nicolas', 'Josie'];
+const notasAlunos = [10, 10, 7, 3, 5.9];
+
+const reprovados = alunos.filter((aluno, index) => { if (notasAlunos[index] < 6) aluno });
+console.log(`Aluno(s) reprovado(s): ${reprovados}`);
+
+/* Média com reduce */
+/* 
+O reduce recebe como parâmetro uma função e essa função deve ter dois parâmetros em sua base, 
+que são o "acumulador" que será responsável por armanezar os valores agredados de cada passada 
+pela lista e o "valorAtual" que recebe o valor do indice atual.
+*/
+
+const medias = notasAlunos.reduce((acumulador, valorAtual) => acumulador + valorAtual)/notasAtualizadas.length;
+console.log(medias.toFixed(2));

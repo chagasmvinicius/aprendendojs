@@ -99,3 +99,4 @@ Obs.: acabei iniciando esse curso após ter feito os dois anteriores voltados pa
 79) Atualização da lista de familiares com duas dimensões ordenadas: nome, idade; ✅
 80) Utilização de lista bidimensional "const array3 = [array1, array2]"; ✅
 81) Utilização do método .map(); ✅
+82) Utilização do método .reduce((acumulador, valorAtual) => {}) para calcular uma média de valores; ✅

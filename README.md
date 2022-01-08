@@ -96,3 +96,4 @@ Obs.: acabei iniciando esse curso após ter feito os dois anteriores voltados pa
 
 77) Iniciando exercícios práticos de arrays utilizando forEach; ✅
 78) Exercícios e testes utilizando alguns dos principais métodos de um Array (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array). Está tudo detalhado no arquivo "array.js"; ✅
+79) Atualização da lista de familiares com duas dimensões ordenadas: nome, idade; ✅

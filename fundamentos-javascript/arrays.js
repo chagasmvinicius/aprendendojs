@@ -17,12 +17,12 @@ notas.forEach(function(nota) {
 
 console.log(`A média é: ${media}`);
 
-/* -----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------*/
 
 /* Principais métodos de um Array */
 
 let familia = ['Vinicius', 'Nil', 'Soraya', 'Karize'];
-let idades = [28, 24, 61, 63];
+let idades = [28, 61, 63, 24];
 
 /* 
 .concat(): Junta dois arrays, colocando o array passado como argumento, logo depois do primeiro. Em português essa operação é conhecida como concatenação.
@@ -80,7 +80,22 @@ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects
 const membrosMesmoSangue = familia.slice(0, 3);
 console.log(`Os familiares de mesmo sangue são: ${membrosMesmoSangue}`);
 
-/* -----------------------------------------------------------------------------*/
+/*
+.splice(): Atualiza indices do array, removendo alguns e incluindo outros.
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+*/
 
+let familiaComAdicao = ['Vinicius', 'Nil', 'XPTO', 'Soraya', 'Karize'];
+familiaComAdicao.splice(2, 1, 'Spike');
+console.log(`O novo array atualizado ficou assim: ${familiaComAdicao}`);
 
+/*-----------------------------------------------------------------------------*/
 
+/* Atualização da lista de familiares com duas dimensões ordenadas: nome, idade */
+
+const identidades = [];
+for (let i = 0; i < familia.length && i < idades.length; i++) {
+    identidades.push(familia[i]);
+    identidades.push(idades[i]);
+}
+console.log(identidades);

@@ -89,6 +89,37 @@ let familiaComAdicao = ['Vinicius', 'Nil', 'XPTO', 'Soraya', 'Karize'];
 familiaComAdicao.splice(2, 1, 'Spike');
 console.log(`O novo array atualizado ficou assim: ${familiaComAdicao}`);
 
+/*
+.includes(): O método includes() determina se um array contém um determinado elemento, retornando true ou false apropriadamente.
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
+*/
+
+const contemSoraya = familiaEIdadesConcat.includes('Soraya');
+console.log(`Soraya faz parte do array? Resposta: ${contemSoraya}`);
+
+/*
+.map(): O método map() invoca a função callback passada por argumento para cada elemento do Array e devolve um novo Array como resultado.
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map 
+*/
+
+// Extraindo a raiz quadrada de números:
+
+const nums = [1, 4, 9, 25];
+const raizes = nums.map(Math.sqrt);
+console.log(raizes);
+
+// Transformando palavras em MAIUSUCLA:
+
+const palavras = ['olá', 'boa tarde', 'tchau'];
+const maiusculas = palavras.map(palavra => {return palavra.toUpperCase()}); 
+console.log(maiusculas);
+
+// Acrescentando 1 ponto em cada nota menor que 10:
+
+const notasReais = [5.5, 7, 3, 10, 8, 4.8, 10];
+const notasAtualizadas = notasReais.map(nota => nota < 10 ? ++nota : nota );
+console.log(notasAtualizadas);
+
 /*-----------------------------------------------------------------------------*/
 
 /* Atualização da lista de familiares com duas dimensões ordenadas: nome, idade */
@@ -99,3 +130,10 @@ for (let i = 0; i < familia.length && i < idades.length; i++) {
     identidades.push(idades[i]);
 }
 console.log(identidades);
+
+// Outra forma de fazer praticamente o mesmo (utilizando listas bidimensionais):
+
+const familia2D = [familia, idades];
+for (let i = 0; i < familia2D[0].length && i < familia2D[1].length; i++) {
+    console.log(`NOME: ${familia2D[0][i]} | IDADE: ${familia2D[1][i]} \n`);
+}

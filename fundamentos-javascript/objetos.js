@@ -5,31 +5,41 @@ let identidades = [
         nome: 'Vinicius',
         idade: 28,
         email: 'vinicius@email.com',
-        cpf: '12344278820'
+        cpf: '12344278820',
+        saldo: 0,
+        depositarValor: function (valor) { this.saldo += valor }
     },
     {
         nome: 'Karize',
         idade: 24,
         email: 'karize@email.com',
-        cpf: '72384378843'
+        cpf: '72384378843',
+        saldo: 0,
+        depositarValor: function (valor) { this.saldo += valor }
     },
     {
         nome: 'Nilvaldo',
         idade: 61,
         email: 'nilvaldo@gmail.com',
-        cpf: '65344528990'
+        cpf: '65344528990',
+        saldo: 0,
+        depositarValor: function (valor) { this.saldo += valor }
     },
     {
         nome: 'Soraya',
         idade: 63,
         email: 'soraya@gmail.com',
-        cpf: '71448878902'
+        cpf: '71448878902',
+        saldo: 0,
+        depositarValor: function (valor) { this.saldo += valor }
     },
     {
         nome: 'Irhael',
         idade: 17,
         email: 'irhael@gmail.com',
-        cpf: '22377278121'
+        cpf: '22377278121',
+        saldo: 0,
+        depositarValor: function (valor) { this.saldo += valor }
     }
 ];
 
@@ -59,5 +69,29 @@ for (let i = 0; i < identidades.length; i++) {
     }
 }
 
-/*-----------------------------------------------------------------------------*/
+/* Adicionando novas chaves e valores em um objeto já criado */
 
+const telefones = ['111111111', '222222222', '333333333', '444444444', '55555555'];
+for (let i = 0; i < identidades.length; i++) {
+    for (let t = 0; t < telefones.length; t++) {
+        identidades[i].telefone = telefones[i];
+    }
+}
+console.log(identidades);
+
+/*
+Criei a função "alterarEmail(novoEmail)" para que possamos executa-la quando há a necessidade de
+o e-mail de alguma pessoa
+*/
+
+const alterarEmail = (nome, novoEmail) => {identidades.forEach(identidade => {if (identidade.nome === nome) identidade.email = novoEmail})};
+
+alterarEmail('Soraya', 'smartinschagas@gmail.com');
+console.log(identidades);
+
+/*
+Criei o comportando de depositar valor ao saldo de determinada pessoa
+*/
+
+identidades[4].depositarValor(100);
+console.log(identidades);

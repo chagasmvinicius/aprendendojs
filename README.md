@@ -100,3 +100,4 @@ Obs.: acabei iniciando esse curso após ter feito os dois anteriores voltados pa
 80) Utilização de lista bidimensional "const array3 = [array1, array2]"; ✅
 81) Utilização do método .map(); ✅
 82) Utilização do método .reduce((acumulador, valorAtual) => {}) para calcular uma média de valores; ✅
+83) Criação de uma lista de identidades (parecido com JSON: [{}, {}, {}]) e exibição dos dados de maneira ordenada; ✅

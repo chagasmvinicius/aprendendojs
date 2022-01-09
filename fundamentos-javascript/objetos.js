@@ -7,6 +7,7 @@ let identidades = [
         email: 'vinicius@email.com',
         cpf: '12344278820',
         saldo: 0,
+        telefones: ['111111111', '222222222'],
         depositarValor: function (valor) { this.saldo += valor }
     },
     {
@@ -15,6 +16,7 @@ let identidades = [
         email: 'karize@email.com',
         cpf: '72384378843',
         saldo: 0,
+        telefones: ['333333333, 444444444'],
         depositarValor: function (valor) { this.saldo += valor }
     },
     {
@@ -23,6 +25,7 @@ let identidades = [
         email: 'nilvaldo@gmail.com',
         cpf: '65344528990',
         saldo: 0,
+        telefones: ['555555555', '666666666'],
         depositarValor: function (valor) { this.saldo += valor }
     },
     {
@@ -31,6 +34,7 @@ let identidades = [
         email: 'soraya@gmail.com',
         cpf: '71448878902',
         saldo: 0,
+        telefones: ['777777777', '888888888'],
         depositarValor: function (valor) { this.saldo += valor }
     },
     {
@@ -39,6 +43,7 @@ let identidades = [
         email: 'irhael@gmail.com',
         cpf: '22377278121',
         saldo: 0,
+        telefones: ['999999999', '000000000'],
         depositarValor: function (valor) { this.saldo += valor }
     }
 ];
@@ -84,7 +89,7 @@ Criei a função "alterarEmail(novoEmail)" para que possamos executa-la quando h
 o e-mail de alguma pessoa
 */
 
-const alterarEmail = (nome, novoEmail) => {identidades.forEach(identidade => {if (identidade.nome === nome) identidade.email = novoEmail})};
+const alterarEmail = (nome, novoEmail) => { identidades.forEach(identidade => { if (identidade.nome === nome) identidade.email = novoEmail }) };
 
 alterarEmail('Soraya', 'smartinschagas@gmail.com');
 console.log(identidades);
@@ -95,3 +100,19 @@ Criei o comportando de depositar valor ao saldo de determinada pessoa
 
 identidades[4].depositarValor(100);
 console.log(identidades);
+
+/*
+Percorrendo um objeto com for...in para retornar as informações da identidade da pessoa
+*/
+
+let identidadeVinicius = identidades[0];
+let informacoes = '';
+for (let chave in identidadeVinicius) {
+    if (typeof identidadeVinicius[chave] !== 'function') {
+        informacoes += `
+        ${chave}: ${identidadeVinicius[chave]}
+    `
+    }
+}
+console.log(informacoes);
+

@@ -104,3 +104,4 @@ Obs.: acabei iniciando esse curso após ter feito os dois anteriores voltados pa
 84) Acessando cada chave do objeto a partir de uma lista que contém todas as chaves, formato "[chaves[c]]: identidades[i][chaves[c]]"; ✅
 85) Criei a função "alterarEmail(novoEmail)" para que possamos executa-la quando há a necessidade de
 o e-mail de alguma pessoa; ✅
+86) Percorrendo um objeto com for...in (for { let chave in objeto}) para retornar as informações da identidade da pessoa; ✅

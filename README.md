@@ -109,3 +109,6 @@ o e-mail de alguma pessoa; ✅
 88) Método "Object.entries(objeto)" que retorna um array com outros arrays separados por cada chave e valor. Assim: [[chave1, valor1], [chave2, valor2]]; ✅
 89) Utilização do "spread operator" (...) para criar uma lista única de telefones. Com o spread operator é possível percorrer vários arrays e unificá-los em um único array com todos os dados. Além disso utilizei o "console.table()" para exibir no terminal uma tabela ao invés de lista; ✅
 90) Utilização do JSON com a biblioteca XMLHttpRequest (arquivo "funcionamento-json.js") -> Métodos: 1) JSON.parse(json): converte JSON para um objeto JavaScript; 2) JSON.stringify(objeto): converte um objeto JavaScript para o formato JSON; (https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/JSON) ✅
+91) Para visualizar os métodos de cada função, objeto, string e etc podemos utilizar o método "var string = ''" > "string.__proto__", ele lista todos os métodos da instância; ✅
+92) Exemplificação da criação de classe e herança entre classes e métodos. Antigamente os construtores eram criados a partir de funções, porém atualmente temos as classes para gerar construtores que serão usados para criar novos objetos padronizados a partir da herança das propriedades da classe; ✅
+93) Exercício sobre herança entre classes; ✅

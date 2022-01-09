@@ -116,3 +116,24 @@ for (let chave in identidadeVinicius) {
 }
 console.log(informacoes);
 
+/* Métodos de um Object */
+
+/* Object.keys(objeto): retorna todas as chaves de um objeto dentro de um array */
+
+const chavesIdentidades0 = Object.keys(identidades[0]);
+console.log(chavesIdentidades0);
+
+/* Object.values(objeto): retorna todas os valores de cada chave de um objeto dentro de um array */
+
+const valoresIdentidades0 = Object.values(identidades[0]);
+console.log(valoresIdentidades0);
+
+/* 
+Object.entries(objeto): retorna um array com outros arrays separados por cada chave e valor.
+Assim: [[chave1, valor1], [chave2, valor2]]
+*/
+
+const entriesIdentidades0 = Object.entries(identidades[0]);
+console.log(entriesIdentidades0);
+
+

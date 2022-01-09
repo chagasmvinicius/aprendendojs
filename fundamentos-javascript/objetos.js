@@ -172,4 +172,3 @@ identidades.forEach(identidade => {
     }
 });
 console.table(listaUnicaTelefones);
-

@@ -7,7 +7,7 @@ let identidades = [
         email: 'vinicius@email.com',
         cpf: '12344278820',
         saldo: 0,
-        telefones: ['111111111', '222222222'],
+        telefones: ['111111111', '222222222', '983457162'],
         depositarValor: function (valor) { this.saldo += valor }
     },
     {
@@ -16,7 +16,7 @@ let identidades = [
         email: 'karize@email.com',
         cpf: '72384378843',
         saldo: 0,
-        telefones: ['333333333, 444444444'],
+        telefones: ['333333333', '444444444', '87136625344'],
         depositarValor: function (valor) { this.saldo += valor }
     },
     {
@@ -25,7 +25,7 @@ let identidades = [
         email: 'nilvaldo@gmail.com',
         cpf: '65344528990',
         saldo: 0,
-        telefones: ['555555555', '666666666'],
+        telefones: ['555555555', '666666666', '91827365142'],
         depositarValor: function (valor) { this.saldo += valor }
     },
     {
@@ -34,7 +34,7 @@ let identidades = [
         email: 'soraya@gmail.com',
         cpf: '71448878902',
         saldo: 0,
-        telefones: ['777777777', '888888888'],
+        telefones: ['777777777', '888888888', '901029376511'],
         depositarValor: function (valor) { this.saldo += valor }
     },
     {
@@ -43,7 +43,7 @@ let identidades = [
         email: 'irhael@gmail.com',
         cpf: '22377278121',
         saldo: 0,
-        telefones: ['999999999', '000000000'],
+        telefones: ['999999999', '000000000', '923887166522'],
         depositarValor: function (valor) { this.saldo += valor }
     }
 ];
@@ -136,4 +136,40 @@ Assim: [[chave1, valor1], [chave2, valor2]]
 const entriesIdentidades0 = Object.entries(identidades[0]);
 console.log(entriesIdentidades0);
 
+/* 
+Utilização do spread operator para listar todos os telefones do objeto identidade em um 
+único array. A diferença no código abaixo de utilizar o spread operator ou não utilizar
+é a listagem única de cada telefone em apenas 1 array. Ou seja, sem o spread operator
+seria mais de 1 array de acordo com o número de arrays de telefone em cada identidade do
+objeto. A diferença seria assim:
+-> Resultado com spread operator (listUnicaTelefones.push(...identidade[chave])):
+[
+  '111111111',    '222222222',
+  '983457162',    '333333333',
+  '444444444',    '87136625344',
+  '555555555',    '666666666',
+  '91827365142',  '777777777',
+  '888888888',    '901029376511',
+  '999999999',    '000000000',
+  '923887166522'
+]
+-> Resultado sem spread operator (listUnicaTelefones.push(identidade[chave])):
+[
+  [ '111111111', '222222222', '983457162' ],
+  [ '333333333', '444444444', '87136625344' ],
+  [ '555555555', '666666666', '91827365142' ],
+  [ '777777777', '888888888', '901029376511' ],
+  [ '999999999', '000000000', '923887166522' ]
+]
+*/
+
+const listaUnicaTelefones = [];
+identidades.forEach(identidade => {
+    for(let chave in identidade) {
+        if (chave === 'telefones') {
+            listaUnicaTelefones.push(...identidade[chave]);
+        }
+    }
+});
+console.table(listaUnicaTelefones);
 

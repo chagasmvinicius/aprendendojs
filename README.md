@@ -107,3 +107,4 @@ o e-mail de alguma pessoa; ✅
 86) Percorrendo um objeto com for...in (for { let chave in objeto}) para retornar as informações da identidade da pessoa; ✅
 87) Conhecendo os métodos "Object.keys(objeto)" e "Object.values(objeto)" dos Objetos. O primeiro retorna em um array todas as chaves do objeto e o outro retorna todos os valores de cada chave; ✅
 88) Método "Object.entries(objeto)" que retorna um array com outros arrays separados por cada chave e valor. Assim: [[chave1, valor1], [chave2, valor2]]; ✅
+89) Utilização do "spread operator" (...) para criar uma lista única de telefones. Com o spread operator é possível percorrer vários arrays e unificá-los em um único array com todos os dados. Além disso utilizei o "console.table()" para exibir no terminal uma tabela ao invés de lista; ✅

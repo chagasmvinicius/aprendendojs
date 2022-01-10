@@ -1,4 +1,4 @@
-🎖 CERTIFICATES
+🎖 <strong>CERTIFICATES:</strong>
  
 1) [CURSO] GIT E GITHUB: https://cursos.alura.com.br/certificate/167dc216-da67-43fa-a28c-1b2ff2f1608b
 2) [CURSO] HTTP: https://cursos.alura.com.br/certificate/d3fa9498-a0e8-4055-a7cd-1488aa123f6b
@@ -9,18 +9,18 @@
 4) [CURSO] JAVASCRIPT: PROGRAMANDO NA LINGUAGEM DA WEB: https://cursos.alura.com.br/certificate/a0b5b608-e80d-44de-aef6-312c218c7676
 5) [CURSO] JAVASCRIPT: CONHECENDO O BROWSER E PADRÕES DE PROJETO: https://cursos.alura.com.br/certificate/de8f204e-3190-4ca4-a26e-e52d1238938e
 
-🏁 CHECKPOINTS
+🏁 <string>CHECKPOINTS</strong>
 
-📍 GIT e GITHUB
+📍 <i>GIT e GITHUB</i>
 
 1) Aulas sobre Git e GitHub; ✅
 2) Configuração do Git e GitHub; ✅
 
-📍 HTTP 
+📍 <i>HTTP</i> 
 
 3) Aulas sobre HTTP/HTTPS; ✅
 
-📍 JAVASCRIPT: PROGRAMANDO NA LINGUAGEM DA WEB (pasta "introducao-javascript")
+📍 <i>JAVASCRIPT: PROGRAMANDO NA LINGUAGEM DA WEB (pasta "introducao-javascript")</i>
 
 4) Introdução javascript (introducao-javascript);
 5) Uitlizando a função do DOM (Document Object Model) "document.querySelector()" para identificar o ID ("# + id", ou para class seria ". + id") do H1 do título do index.html para trocar o conteúdo de texto do título com a função ".textContent = novoConteudoTexto" (.innerHTML). ✅
@@ -57,7 +57,7 @@
 36) Finalização da funcionalidade de import de pacientes utilizando o AJAX - Método XMLHttpRequest para puxar (GET) dados de uma API externa (sem validação se os dados já foram puxados ou não). Obs.: utilizei o JSON.parse(json) para transformar a reposta JSON da requisição em um objeto javascript para alimentar a tabela; ✅
 37) Colocando validação pelo status code da requisição para alertar o usuário, caso seja diferente de 200, que ocorreu um erro; ✅
 
-📍 JAVASCRIPT: CONHECENDO O BROWSER E PADRÕES DE PROJETO (pasta "javascript-avancado-i-aula1") (Orientação a Objetos)
+📍 <i>JAVASCRIPT: CONHECENDO O BROWSER E PADRÕES DE PROJETO (pasta "javascript-avancado-i-aula1") (Orientação a Objetos)</i>
 
 38) Subindo os novos desenvolvimentos padrão para o github; ✅
 39) Inserindo valores na tabela criando TR e TDs para cada coluna; ✅
@@ -102,7 +102,7 @@ Além disso também criamos métodos para alterar um texto, "set texto()", e out
 75) Criação da classe pai "View" para acumular os métodos comuns dentre as outras viewers para que possamos herdá-los em cada uma e utilizar esses métodos em cada uma, sem a necessidade de repetir código. Basta declarar nas classes filhas, que essas são extensões dessa classe pai (extends). Além disso, em caso de métodos que possuem parâmetros, devemos em cada classe filha utilizar o método "super(parâmetro)" dentro do construtor para que o parâmetro em questão seja enviado à classe pai. Obs.: ao chamar o arquivo "View.js" no HTML é necessário chamá-lo antes dos arquivos das classes filhas, pois esse arquivo precisa ser carregado antes pelo HTML; ✅
 76) Importação dos métodos "update()" e do constructor da classe "View" como herança, através a declaração "class NegociacoesView extends View". Dessa forma, o construtor utiliza o método "super()" para enviar o parâmetro ao pai e utilizamos os métodos herdados da classe pai "View"; ✅
 
-📍 JAVASCRIPT PARA BACKEND (pasta "fundamentos-javascript")
+📍 <i>JAVASCRIPT PARA BACKEND (pasta "fundamentos-javascript")</i>
 Obs.: acabei iniciando esse curso após ter feito os dois anteriores voltados para web. Por conta disso, acabei só salvando aqui alguns exercícios-chave para aprimorar o meu conhecimento.
 
 77) Iniciando exercícios práticos de arrays utilizando forEach; ✅

@@ -3,9 +3,9 @@
 1) [CURSO] GIT E GITHUB: https://cursos.alura.com.br/certificate/167dc216-da67-43fa-a28c-1b2ff2f1608b
 2) [CURSO] HTTP: https://cursos.alura.com.br/certificate/d3fa9498-a0e8-4055-a7cd-1488aa123f6b
 3) [FORMAÇÃO] JAVASCRIPT PARA BACKEND: https://cursos.alura.com.br/degree/certificate/3d21cd72-4b9a-4c6a-9be7-55b6786b4449
-↳ [CURSO] FUNDAMENTOS DO JAVASCRIPT: TIPOS, VARIÁVEIS E FUNÇÕES: https://cursos.alura.com.br/certificate/b5490be4-3bc9-4696-a6d3-5469b6fd38ad
-↳ [CURSO] FUNDAMENTOS DO JAVASCRIPT: ARRAYS: https://cursos.alura.com.br/certificate/4608f219-4d28-45b6-a2aa-522267f13030
-↳ [CURSO] FUNDAMENTOS DO JAVASCRIPT: OBJETOS: https://cursos.alura.com.br/certificate/e9eea684-da70-4d5f-a6e9-a16668eb0f04
+3.1) [CURSO] FUNDAMENTOS DO JAVASCRIPT: TIPOS, VARIÁVEIS E FUNÇÕES: https://cursos.alura.com.br/certificate/b5490be4-3bc9-4696-a6d3-5469b6fd38ad
+3.2) [CURSO] FUNDAMENTOS DO JAVASCRIPT: ARRAYS: https://cursos.alura.com.br/certificate/4608f219-4d28-45b6-a2aa-522267f13030
+3.3) [CURSO] FUNDAMENTOS DO JAVASCRIPT: OBJETOS: https://cursos.alura.com.br/certificate/e9eea684-da70-4d5f-a6e9-a16668eb0f04
 4) [CURSO] JAVASCRIPT: PROGRAMANDO NA LINGUAGEM DA WEB: https://cursos.alura.com.br/certificate/a0b5b608-e80d-44de-aef6-312c218c7676
 5) [CURSO] JAVASCRIPT: CONHECENDO O BROWSER E PADRÕES DE PROJETO: https://cursos.alura.com.br/certificate/de8f204e-3190-4ca4-a26e-e52d1238938e
 

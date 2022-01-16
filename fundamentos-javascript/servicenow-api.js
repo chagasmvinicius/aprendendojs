@@ -1,22 +1,15 @@
 /*
 XMLHttpRequest: https://xhr.spec.whatwg.org/#dom-xmlhttprequest-setrequestheader
+Documentação API: https://globoservice.service-now.com/kb_view.do?sys_kb_id=6e50fd911b29b89074c4edfbe54bcb55
 */
 
-let shortDescription = document.querySelector('#short_description').value;
-let description = document.querySelector('#description').value;
-let btnGerarINC = document.querySelector('#gerar-inc');
-
-btnGerarINC.addEventListener('click', function () {
-    executeRequest();
-});
-
-function executeRequest() {
+function executeRequest(usuario, senha) {
     let body = {
         "variables": {
-            "short_description": "${shortDescription}",
+            "short_description": `"TESTE (${new Date})"`,
             "contact_phone": "21982958364",
             "request_for": "7d00bdc41bbbd810b4572170f54bcb9b",
-            "description": "${description}",
+            "description": `"TESTE (${new Date})"`,
             "contact_type_": "Automatic",
             "globo_internal": "false",
             "end_costumer": "true",
@@ -44,23 +37,26 @@ function executeRequest() {
 
     const url = 'https://devgloboservice.service-now.com/api/sn_sc/servicecatalog/items/6c31d510db189050fa11cf241496199c/submit_producer';
 
-    /* const XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest; 
-    NÃO PRECISA DECLARAR QUANDO O CÓDIGO IRÁ RODAR NO NAVEGADOR */
+    const XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest; 
+    /* PRECISA DECLARAR QUANDO O CÓDIGO IRÁ RODAR NO NODE */
+
+    const username = usuario;
+    const password = senha;
 
     const request = new XMLHttpRequest();
 
-    request.open('POST', url, true, 'vimartin', 'Vspkmart7@');
+    request.open('POST', url, true, username, password);
     //request.open('POST', `https://cors-anywhere.herokuapp.com/${url}`, true, 'vimartin', 'Vspkmart7@');
 
     request.setRequestHeader('Content-Type', 'application/json');
-    request.setRequestHeader('Access-Control-Allow-Origin', '*');
-    request.setRequestHeader('Access-Control-Allow-Methods', 'POST');
-    request.setRequestHeader('Access-Control-Allow-Headers', '*');
+    // request.setRequestHeader('Access-Control-Allow-Origin', '*');
+    // request.setRequestHeader('Access-Control-Allow-Methods', 'POST');
+    // request.setRequestHeader('Access-Control-Allow-Headers', '*');
 
     request.onload = function () {
         if (request.status === 200) {
             console.log(`
-        Status: ${request.status} - ${request.statusText}
+        Status: ${request.status} - OK
         Response:
         ${request.responseText}
         `);
@@ -74,5 +70,5 @@ function executeRequest() {
     request.send(JSON.stringify(body));
 }
 
-
+executeRequest('digitar o usuario', 'digitar a senha');
 

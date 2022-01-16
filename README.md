@@ -123,3 +123,4 @@ o e-mail de alguma pessoa; ✅
 91) Para visualizar os métodos de cada função, objeto, string e etc podemos utilizar o método "var string = ''" > "string.__proto__", ele lista todos os métodos da instância; ✅
 92) Exemplificação da criação de classe e herança entre classes e métodos. Antigamente os construtores eram criados a partir de funções, porém atualmente temos as classes para gerar construtores que serão usados para criar novos objetos padronizados a partir da herança das propriedades da classe; ✅
 93) Exercício sobre herança entre classes; ✅
+94) Integração com uma API ServiceNow para a criação de incidentes; ✅

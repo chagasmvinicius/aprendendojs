@@ -1,8 +1,11 @@
 export class ContaCorrente {
+    static numeroDeContas = 0;
+
     constructor(agencia, saldo, cliente) {
         this.agencia = agencia;
         this.saldo = saldo;
         this.cliente = cliente;
+        ContaCorrente.numeroDeContas ++;
     }
 
     depositarValor(valor) {
@@ -22,7 +25,7 @@ export class ContaCorrente {
             return console.log(`\nO valor do saque (${valor}) precisa ser menor ou igual ao valor do saldo (${this.saldo}).\n`);
         }
     }
-
+    
     get saldoConta() {
         return this.saldo;
     }

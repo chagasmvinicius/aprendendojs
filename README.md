@@ -9,6 +9,7 @@
 ↳ [CURSO] FUNDAMENTOS DO JAVASCRIPT: OBJETOS: https://cursos.alura.com.br/certificate/e9eea684-da70-4d5f-a6e9-a16668eb0f04 <br>
 5) [CURSO] JAVASCRIPT: PROGRAMANDO NA LINGUAGEM DA WEB: https://cursos.alura.com.br/certificate/a0b5b608-e80d-44de-aef6-312c218c7676
 6) [CURSO] JAVASCRIPT: CONHECENDO O BROWSER E PADRÕES DE PROJETO: https://cursos.alura.com.br/certificate/de8f204e-3190-4ca4-a26e-e52d1238938e
+7) [CURSO] JAVASCRIPT: PROGRAMANDO A ORIENTAÇÃO A OBJETOS: https://cursos.alura.com.br/certificate/f6950567-ae55-4b60-9dc3-dc6f003ae3cf
 
 🏁 <strong>CHECKPOINTS</strong>
 
@@ -130,3 +131,5 @@ o e-mail de alguma pessoa; ✅
 
 94) Integração com uma API ServiceNow para a criação de incidentes; ✅
 95) Import e Export de classes; ✅
+96) JavaScript’s Memory Model: https://medium.com/@ethannam/javascripts-memory-model-7c972cd2c239; ✅
+97) Utilização do "static" para declarar variáveis estáticas em uma classe que poderá ser utilizada de maneira global independente do número de instâncias criadas pela classe. Para isso a variável deve ser declarada fora do construtor() e conter a palavra reservada "static" como prefixo. Além disso, deve ser chamada direto pelo classe, ex.: "ContaCorrente.variavelStatic"; ✅
